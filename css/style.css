@@ -11,6 +11,7 @@
 :root {
   --clr-background: #242331;
   --clr-text: #b88b4a;
+  --clr-text80: rgb(184, 139, 74, 0.7);
   --clr-accent: #533e2d;
   --cursor-animation: none;
   --display: none;
@@ -21,8 +22,11 @@ body {
 }
 
 input,
-p {
+p,
+h1,
+h3 {
   font-family: 'Poppins', sans-serif;
+  margin: var(--margin);
 }
 
 .wrapper {
@@ -34,8 +38,18 @@ p {
   justify-content: center;
 }
 
+.title {
+  margin-bottom: 100px;
+  font-size: 3rem;
+  color: var(--clr-text);
+}
+
+.word {
+  margin-bottom: 60px;
+  color: var(--clr-accent);
+}
+
 .input {
-  margin: var(--margin);
   padding: 0 10px;
   font-size: 1.2rem;
   color: var(--clr-text);
@@ -52,10 +66,9 @@ p {
 
 .output {
   height: 1.5rem;
-  margin: var(--margin);
   font-size: 1.5rem;
   line-height: 1.5rem;
-  color: var(--clr-text);
+  color: var(--clr-text80);
   position: relative;
 }
 
@@ -65,7 +78,7 @@ p {
   position: absolute;
   width: 2.5px;
   height: 100%;
-  background-color: var(--clr-text);
+  background-color: var(--clr-text80);
   transform-origin: center;
   transform: scaleY(1.2);
   margin-left: 3px;
